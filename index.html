@@ -12,45 +12,78 @@
 
 </head>
 <body>
+
     <header>
-       <div class="toggle-menu"></div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Artists</a></li>
-                <li><a href="#">Artwork</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <div class="nav-button">
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="nav-container">
+            <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Artists</a></li>
+                    <li><a href="#">Artwork</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
 
             <div class="contact">
-                <a target="_blank" href="https://maps.app.goo.gl/ZsWMB32pWm1yG5CU9">Commodo Consequat 23</a>
-                <a href="mailto:info@photos.io">info@photos.io</a>
-                <a href="tel:+46720000100">+46 720 000 100</a>
+                <div class="contact-item">Commodo Consequat 23</div>
+                <div class="contact-item">info@photos.io</div>
+                <div class="contact-item">+46 720 000 100</div>
             </div>
-        </nav>
-    </header>   
-    
-    <main class="portfolio">
-        <section class="portfolio__overview">
-            <div class="portfolio__tag">
-                Portfolio
             </div>
-            <div class="portfolio__title">
-                Dolly Parton
-            </div>
-            <div class="portfolio__description">
-                Islands in the stream. That is what we are. No one in between How can we be wrong Sail away with me. To another world. And we rely on each other, huhn hah
-            </div>
-        </section>
+        </div>
+    </div>
 
-        <section class="portfolio__images">
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-            <div class="portfolio__image"><img src="https://www.dummyimage.com/600x600/000/fff" alt=""></div>
-        </section>
+    <main>
+        <div class="container">
+        <div class="overview">
+            <div class="tag">Portfolio</div>
+            <div class="title">Dolly Parton</div>
+            <div class="description">Islands in the stream. That is what we are. No one in between How can we be wrong Sail away with me. To another world. And we rely on each other, huhn hah</div>
+        </div>
+
+        <div class="portfolio">
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+            <div class="portfolio-img">
+                <img src="https://www.dummyimage.com/300x300/000/fff" alt="">
+            </div>
+        </div>
+        </div>
     </main>
+
+    <script>
+       const burger = document.querySelector('.nav-button');
+       const nav = document.querySelector('.nav-container');
+
+       burger.addEventListener('click', function() {
+        nav.classList.toggle('menu-open');
+        burger.classList.toggle('menu-button-active');
+       });
+
+    </script>
 </body>
 </html>
