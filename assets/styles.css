@@ -28,11 +28,8 @@ body {
 
 .wrapper {
     overflow: hidden;
-    position: absolute;
     height: 100%;
     width: 100vw;
-    top: 0;
-    left: 0;
 }
 
 .nav-button {
@@ -156,12 +153,12 @@ nav ul li a {
 
 .overview .title {
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 3rem;
     font-size: 2rem;
 }
 
 .overview .description {
-    line-height: 1.75rem;
+    line-height: 2rem;
 }
 
 .container {
@@ -205,4 +202,32 @@ nav ul li a {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    main.main-work {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .banner {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .work-container {
+        position: absolute;
+        border-left: 3px solid var(--author-color);
+        right: 0;
+        background: rgba(0, 0, 0, .85);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        width: 40%;
+    }
+
+
 }
