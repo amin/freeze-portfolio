@@ -12,6 +12,14 @@
     --tag-color: #CACACA;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
 body {
     background-color: var(--bg-main);
     font-family: "Montserrat", sans-serif;
@@ -29,7 +37,7 @@ body {
 
 .nav-button {
     padding: 1.5rem;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
     position: absolute;
     top: 1rem;
@@ -42,12 +50,11 @@ body {
 .nav-button::before,
 .nav-button::after {
     transition: transform 300ms ease-in-out, top 300ms ease-in-out;
-    ;
     content: "";
     position: absolute;
-    height: 1px;
+    height: 2px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     width: 1.75rem;
     background-color: #fff;
 }
@@ -59,6 +66,10 @@ body {
 
 .nav-button::after {
     top: 60%;
+}
+
+.menu-button-active {
+    position: fixed;
 }
 
 .menu-button-active::before,
@@ -162,6 +173,32 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
+}
+
+.portfolio-img {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-img::before {
+    position: absolute;
+    content: "View Work";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--text-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.portfolio-img:hover::before {
+    opacity: 1;
 }
 
 .portfolio-img img {
