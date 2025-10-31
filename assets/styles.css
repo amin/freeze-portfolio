@@ -147,6 +147,7 @@ nav ul li a {
 
 .overview .author {
     color: var(--author-color);
+    font-weight: 500;
 }
 
 .overview .title {
@@ -182,7 +183,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.75);
-    color: var(--text-color);
+    color: #fff;
     top: 0;
     left: 0;
     right: 0;
@@ -223,7 +224,7 @@ nav ul li a {
         position: absolute;
         border-left: 3px solid var(--author-color);
         right: 0;
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(0, 0, 0, 0.85);
         height: 100vh;
         display: flex;
         align-items: center;
@@ -241,6 +242,13 @@ nav ul li a {
 }
 
 @media screen and (prefers-color-scheme: light) {
+
+
+    .work-container {
+        background: rgba(255, 255, 255, 0.85);
+
+    }
+
     .nav-button {
         border: 1px solid #000;
         background-color: #000;
